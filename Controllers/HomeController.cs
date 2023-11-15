@@ -36,6 +36,10 @@ namespace Livestock_Supervisor.Controllers
             return View(livestocks);
         }
 
+        public IActionResult Login()
+        {
+            return View();
+        }
         private void FetchData()
         {
             if(livestocks.Count > 0)
