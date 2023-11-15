@@ -6,5 +6,7 @@
         public string Name { get; set; }
         public string BirthDate { get; set; }
         public string FertilizationDate { get; set; }
+        public string StepCount { get; set; }
+        public string LastBodyTemp{ get; set; }
     }
 }

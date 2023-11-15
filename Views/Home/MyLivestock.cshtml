@@ -4,7 +4,9 @@
     {"ID"
       ,"NAME"
       ,"BIRTH_DATE"
-      ,"FERTILIZATION_DATE"};
+      ,"FERTILIZATION_DATE"
+      ,"STEP_COUNT"
+      ,"LAST_BODY_TEMP"};
 
     <h1>@ViewData["Title"]</h1>
 }
@@ -29,10 +31,16 @@
                     <td>@data.Name</td>
                     <td>@data.BirthDate</td>
                     <td>@data.FertilizationDate</td>
+                    <td>@data.StepCount</td>
+                    <td>@data.LastBodyTemp</td>
                 </tr>
                 }
             }
         }
-
     </tr>
 </table>
+
+<div>
+    <p>Average step count for a normal livestock is 4500-6500 steps. </p>
+    <p>Average body temp is usually 35,5 - 37,5 degrees celcius. Higher than that must be supervised. </p>
+</div>

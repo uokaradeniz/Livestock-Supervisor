@@ -46,7 +46,7 @@ namespace Livestock_Supervisor.Controllers
             {
                 connection.Open();
                 command.Connection = connection;
-                command.CommandText = "SELECT TOP (1000) [ID],[NAME],[BIRTH_DATE],[FERTILIZATION_DATE] FROM [LivestockDb].[dbo].[LivestockTable]";
+                command.CommandText = "SELECT * FROM [LivestockDb].[dbo].[LivestockTable]";
                 dataReader = command.ExecuteReader();
                 while (dataReader.Read())
                 {
@@ -55,7 +55,9 @@ namespace Livestock_Supervisor.Controllers
                         Id = (int)dataReader["ID"],
                         Name = dataReader["NAME"].ToString(),
                         BirthDate = dataReader["BIRTH_DATE"].ToString(),
-                        FertilizationDate = dataReader["FERTILIZATION_DATE"].ToString()
+                        FertilizationDate = dataReader["FERTILIZATION_DATE"].ToString(),
+                        StepCount = dataReader["STEP_COUNT"].ToString(),
+                        LastBodyTemp = dataReader["LAST_BODY_TEMP"].ToString(),
                     });
                 }
                 connection.Close();
