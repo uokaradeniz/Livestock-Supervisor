@@ -1,0 +1,38 @@
+﻿@{
+    ViewData["Title"] = "My Livestock";
+    string[] TableHeaders = new string[]
+    {"ID"
+      ,"NAME"
+      ,"BIRTH_DATE"
+      ,"FERTILIZATION_DATE"};
+
+    <h1>@ViewData["Title"]</h1>
+}
+
+<table class="table table-bordered table-hover">
+    <tr>
+        @{
+            foreach (var head in TableHeaders)
+            {
+                <th>@head</th>
+            }
+        }
+    </tr>
+    <tr>
+        @{
+            if (Model != null)
+            {
+                foreach (var data in Model)
+                {
+                <tr>
+                    <td>@data.Id</td>
+                    <td>@data.Name</td>
+                    <td>@data.BirthDate</td>
+                    <td>@data.FertilizationDate</td>
+                </tr>
+                }
+            }
+        }
+
+    </tr>
+</table>
