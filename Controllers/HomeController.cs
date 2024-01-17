@@ -50,7 +50,7 @@ namespace Livestock_Supervisor.Controllers
             {
                 connection.Open();
                 command.Connection = connection;
-                command.CommandText = "SELECT * FROM [LivestockDb].[dbo].[LivestockTable]";
+                command.CommandText = "SELECT * FROM [LivestockDb].[dbo].[Livestock]";
                 dataReader = command.ExecuteReader();
                 while (dataReader.Read())
                 {
